@@ -50,7 +50,6 @@ namespace Pinetime {
         using days = std::chrono::duration<int32_t, std::ratio<86400>>; // TODO: days is standard in c++20
         Utility::DirtyValue<std::chrono::time_point<std::chrono::system_clock, days>> currentDate;
         Utility::DirtyValue<std::optional<Controllers::SimpleWeatherService::CurrentWeather>> currentWeather {};
-        Utility::DirtyValue<const char*> condition {};
 
         lv_obj_t* notificationIcon;
         lv_obj_t* label_prompt_1;
