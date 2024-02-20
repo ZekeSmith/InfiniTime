@@ -51,7 +51,7 @@ Calendar::Calendar(Controllers::DateTime& dateTimeController) : dateTimeControll
 
 bool Calendar::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
   switch (event) {
-    case TouchEvents::SwipeLeft: {
+    case TouchEvents::SwipeUp: {
       if (current.month == 12) {
         current.month = 1;
         current.year++;
@@ -62,7 +62,7 @@ bool Calendar::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
       lv_calendar_set_showed_date(calendar, &current);
       return true;
     }
-    case TouchEvents::SwipeRight: {
+    case TouchEvents::SwipeDown: {
       if (current.month == 1) {
         current.month = 12;
         current.year--;
