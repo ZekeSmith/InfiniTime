@@ -51,7 +51,7 @@ WatchFaceTerminal::WatchFaceTerminal(Controllers::DateTime& dateTimeController,
   label_prompt_1 = lv_label_create(lv_scr_act(), nullptr);
   lv_obj_set_style_local_text_color(label_prompt_1, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, Colors::lightGray);
   lv_obj_align(label_prompt_1, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, -80);
-  lv_label_set_text_static(label_prompt_1, "user@watch:~ $ now");
+  lv_label_set_text_static(label_prompt_1, "zeke@watch:~ $ now");
 
   label_time = lv_label_create(lv_scr_act(), nullptr);
   lv_label_set_recolor(label_time, true);
@@ -85,7 +85,7 @@ WatchFaceTerminal::WatchFaceTerminal(Controllers::DateTime& dateTimeController,
   label_prompt_2 = lv_label_create(lv_scr_act(), nullptr);
   lv_obj_set_style_local_text_color(label_prompt_2, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, Colors::lightGray);
   lv_obj_align(label_prompt_2, lv_scr_act(), LV_ALIGN_IN_LEFT_MID, 0, 80);
-  lv_label_set_text_static(label_prompt_2, "user@watch:~ $");
+  lv_label_set_text_static(label_prompt_2, "zeke@watch:~ $");
 
   taskRefresh = lv_task_create(RefreshTaskCallback, LV_DISP_DEF_REFR_PERIOD, LV_TASK_PRIO_MID, this);
   Refresh();
