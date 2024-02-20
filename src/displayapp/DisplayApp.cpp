@@ -19,6 +19,7 @@
 #include "displayapp/screens/Metronome.h"
 #include "displayapp/screens/Music.h"
 #include "displayapp/screens/Navigation.h"
+#include "displayapp/screens/Calendar.h"
 #include "displayapp/screens/Notifications.h"
 #include "displayapp/screens/SystemInfo.h"
 #include "displayapp/screens/Tile.h"
@@ -326,6 +327,9 @@ void DisplayApp::Refresh() {
                 break;
               case TouchEvents::SwipeDown:
                 LoadNewScreen(Apps::Notifications, DisplayApp::FullRefreshDirections::Down);
+                break;
+              case TouchEvents::SwipeLeft:
+                LoadNewScreen(Apps::Calendar, DisplayApp::FullRefreshDirections::LeftAnim);
                 break;
               case TouchEvents::SwipeRight:
                 LoadNewScreen(Apps::QuickSettings, DisplayApp::FullRefreshDirections::RightAnim);
