@@ -491,6 +491,9 @@ void DisplayApp::LoadScreen(Apps app, DisplayApp::FullRefreshDirections directio
                                                                *systemTask,
                                                                Screens::Notifications::Modes::Preview);
       break;
+    case Apps::Calendar:
+      currentScreen = std::make_unique<Screens::Calendar>(dateTimeController);
+      break;
     case Apps::QuickSettings:
       currentScreen = std::make_unique<Screens::QuickSettings>(this,
                                                                batteryController,
